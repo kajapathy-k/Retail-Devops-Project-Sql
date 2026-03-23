@@ -13,7 +13,7 @@ spec:
     - matches:
         - path:
             type: PathPrefix
-            value: /fitness
+            value: /retail
       filters:
         - type: URLRewrite
           urlRewrite:
