@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
+  namespace: retail-ns
 spec:
   replicas: 1
   selector:
@@ -37,6 +38,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mysql-service
+  namespace: retail-ns
 spec:
   selector:
     app: mysql

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: capsule-app
+  namespace: retail-ns
 spec:
   replicas: 2
   selector:
@@ -53,6 +54,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: capsule-service
+  namespace: retail-ns
 spec:
   selector:
     app: capsule-app
