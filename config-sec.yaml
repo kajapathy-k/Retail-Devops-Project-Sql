@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: gateway-ns
+data:
+  MYSQL_DATABASE: "capsule_db"
+  MYSQL_USER: "capsule_user"
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+  namespace: gateway-ns
+type: Opaque
+data:
+  MYSQL_ROOT_PASSWORD: cm9vdHBhc3N3b3Jk
+  MYSQL_PASSWORD: Y2Fwc3VsZV9wYXNzd29yZA==
