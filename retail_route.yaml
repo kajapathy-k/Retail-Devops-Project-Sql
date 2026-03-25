@@ -9,11 +9,10 @@ spec:
       namespace: gateway-ns
 
   rules:
-    # Rule 1 → /fitness (changed from /retail)
     - matches:
         - path:
             type: PathPrefix
-            value: /
+            value: /retail  
       filters:
         - type: URLRewrite
           urlRewrite:
@@ -23,36 +22,3 @@ spec:
       backendRefs:
         - name: capsule-service
           port: 80
-
-    # Rule 2 → /register
-    # - matches:
-    #     - path:
-    #         type: PathPrefix
-    #         value: /register
-    #   backendRefs:
-    #     - name: capsule-service
-    #       port: 80
-
-    # - matches:
-    #     - path:
-    #         type: PathPrefix
-    #         value: /login
-    #   backendRefs:
-    #     - name: capsule-service
-    #       port: 80
-
-    # - matches:
-    #     - path:
-    #         type: PathPrefix
-    #         value: /index
-    #   backendRefs:
-    #     - name: capsule-service
-    #       port: 80
-
-    # - matches:
-    #     - path:
-    #         type: PathPrefix
-    #         value: /admin-dashboard
-    #   backendRefs:
-    #     - name: capsule-service
-    #       port: 80
