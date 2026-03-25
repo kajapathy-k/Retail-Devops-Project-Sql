@@ -5,20 +5,20 @@ metadata:
   namespace: gateway-ns
 spec:
   parentRefs:
-    - name: new-gateway
+    - name: fitness-gateway
       namespace: gateway-ns
 
   rules:
     - matches:
         - path:
             type: PathPrefix
-            value: /retail  
-      filters:
-        - type: URLRewrite
-          urlRewrite:
-            path:
-              type: ReplacePrefixMatch
-              replacePrefixMatch: /
+            value: /  
+      # filters:
+      #   - type: URLRewrite
+      #     urlRewrite:
+      #       path:
+      #         type: ReplacePrefixMatch
+      #         replacePrefixMatch: /
       backendRefs:
         - name: capsule-service
           port: 80
