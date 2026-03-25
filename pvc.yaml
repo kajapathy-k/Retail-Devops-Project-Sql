@@ -5,7 +5,7 @@ metadata:
   namespace: gateway-ns
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   storageClassName: nfs-storage
   resources:
     requests:
