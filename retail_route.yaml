@@ -12,14 +12,14 @@ spec:
     - matches:
         - path:
             type: PathPrefix
-            value: /
-            
-      # filters:
-      #   - type: URLRewrite
-      #     urlRewrite:
-      #       path:
-      #         type: ReplacePrefixMatch
-      #         replacePrefixMatch: /
+            value: /retail
+
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
       backendRefs:
         - name: capsule-service
           port: 80
